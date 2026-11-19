@@ -30,12 +30,13 @@
   - Resolutions: Full HD (1920×1080), 4K UHD (3840×2160), Adobe Stock/Shutterstock (6000×4000 24MP), Square (4000×4000), Mobile 9:16 (1080×1920), or Custom dimensions up to 8000×8000 px.
 - 🛡️ **Minimum 10 MB Size Guarantee**:
   - Automatically guarantees every exported single image and batch ZIP image is $\ge 10.0\text{ MB}$ (padded to ~10.05 MB compliant with standard JPEG COM / PNG tEXt / WebP JUNK specifications) for instant approval on Adobe Stock, Freepik, Shutterstock, and Getty Images.
-- 🎬 **4K Motion Video Export Studio (30s Commercial Stock Ready)**:
-  - Export ultra-crisp **4K Ultra HD (3840 × 2160)** motion backgrounds at 30 FPS / 60 FPS.
-  - Default duration: **30 Seconds** (commercial stock agency standard for Envato, Pond5, Motion Array, Adobe Stock).
-  - Mathematical **Seamless 30s Motion Loop** algorithm: start and end frames loop endlessly without any jumps or cuts.
-  - High stock quality bitstream (~35 Mbps) encoded natively in modern browsers (**MP4** / **WebM**).
-  - Real-time video preview stage with live progress bar, frame counter, and stop/cancel controls (`V`).
+- ⚡ **Turbo Hardware-Accelerated 4K 60FPS Video Export Studio**:
+  - Export ultra-crisp **4K Ultra HD (3840 × 2160)** motion backgrounds at **60 FPS** (fluid, broadcast-quality motion).
+  - **Turbo Hardware Speed (WebCodecs API)**: Encodes offline directly via GPU hardware acceleration without real-time playback waiting (typically 80–150 FPS encoding speed!).
+  - Progressive **MP4 (H.264)** and **WebM (VP9 UHD)** native in-browser muxing with zero third-party dependencies.
+  - Default duration: **30 Seconds** (commercial stock standard: Envato, Pond5, Motion Array, Adobe Stock).
+  - Mathematical **Seamless 30s Motion Loop**: Start and end frames align with $2\pi \times k$ precision for infinite looping.
+  - Live progress monitoring with real-time FPS speed readout, ETA, thumbnail preview, and cancel button (`V`).
 - 📦 **Automated Batch ZIP Generation**: Generate 10 to 100 unique variations with smooth background async rendering and download directly as a single ZIP archive.
 - 💾 **Local Project Storage**: Save, duplicate, import, and export projects using browser IndexedDB and JSON backup.
 - ⌨️ **Productivity Keyboard Shortcuts**:

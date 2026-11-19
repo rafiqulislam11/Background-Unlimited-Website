@@ -427,9 +427,9 @@
                         <span id="anim-dot" class="w-2 h-2 rounded-full bg-slate-500"></span>
                         <span class="hidden sm:inline">Motion</span>
                     </button>
-                    <button onclick="openVideoExportModal()" id="btn-export-video-quick" class="card-surface px-2 py-1.5 rounded-xl text-[11px] font-semibold flex items-center gap-1 border border-purple-500/40 text-purple-300 hover:text-white hover:border-purple-400 bg-purple-950/25 shrink-0" title="Export 4K Motion Video (V)">
-                        <span>🎬</span>
-                        <span class="hidden sm:inline font-bold">4K Video</span>
+                    <button onclick="openVideoExportModal()" id="btn-export-video-quick" class="card-surface px-2 py-1.5 rounded-xl text-[11px] font-semibold flex items-center gap-1 border border-purple-500/40 text-purple-300 hover:text-white hover:border-purple-400 bg-purple-950/25 shrink-0" title="Fast Turbo 4K 60FPS Video Export (V)">
+                        <span>⚡</span>
+                        <span class="hidden sm:inline font-bold">4K 60FPS</span>
                     </button>
                     <button onmousedown="showBeforeState(true)" onmouseup="showBeforeState(false)" onmouseleave="showBeforeState(false)" ontouchstart="showBeforeState(true)" ontouchend="showBeforeState(false)" class="card-surface px-2 py-1.5 rounded-xl text-[11px] font-semibold" title="Hold to Compare Before/After">
                         Compare
@@ -714,12 +714,12 @@
                     <div class="card-surface p-2.5 rounded-xl border border-purple-500/40 bg-purple-950/20 space-y-2 shadow-lg shadow-purple-950/30">
                         <div class="flex items-center justify-between">
                             <span class="text-[11px] font-bold text-purple-300 flex items-center gap-1.5">
-                                <span>🎬</span> 4K Motion Video Export
+                                <span>⚡</span> 4K 60FPS Video Export
                             </span>
-                            <span class="text-[9px] font-mono px-2 py-0.5 rounded bg-purple-500/25 text-purple-200 font-extrabold border border-purple-500/50">4K · 30s Ready</span>
+                            <span class="text-[9px] font-mono px-2 py-0.5 rounded bg-purple-500/25 text-purple-200 font-extrabold border border-purple-500/50">⚡ 4K · 60 FPS TURBO</span>
                         </div>
                         <p class="text-[10px]" style="color: var(--text-secondary);">
-                            Export silky smooth 4K Ultra HD (3840×2160) 30-second motion video background ready for Adobe Stock, Shutterstock, Envato & Pond5.
+                            Hardware-accelerated ultra-fast export for 4K UHD (3840×2160) at 60 FPS seamless motion video (Adobe Stock, Shutterstock, Envato & Pond5 ready).
                         </p>
                         <div class="grid grid-cols-2 gap-1.5">
                             <div>
@@ -745,15 +745,15 @@
                             <div>
                                 <label class="block text-[9px] mb-0.5" style="color: var(--text-secondary);">Format</label>
                                 <select id="video-export-fmt" class="input-surface w-full px-2 py-1 rounded-lg text-[11px] font-semibold">
-                                    <option value="mp4" selected>MP4 (H.264)</option>
+                                    <option value="mp4" selected>MP4 (H.264 Fast)</option>
                                     <option value="webm">WebM (VP9 UHD)</option>
                                 </select>
                             </div>
                             <div>
                                 <label class="block text-[9px] mb-0.5" style="color: var(--text-secondary);">Framerate</label>
                                 <select id="video-export-fps" class="input-surface w-full px-2 py-1 rounded-lg text-[11px] font-semibold">
-                                    <option value="30" selected>30 FPS (Standard)</option>
-                                    <option value="60">60 FPS (Ultra Smooth)</option>
+                                    <option value="60" selected>60 FPS (Ultra Smooth)</option>
+                                    <option value="30">30 FPS (Standard)</option>
                                 </select>
                             </div>
                         </div>
@@ -765,7 +765,7 @@
                             <span class="text-[9px] text-purple-300 font-mono">~35 Mbps Bitrate</span>
                         </div>
                         <button onclick="startMotionVideoExportFromPanel()" id="btn-panel-video-export" class="w-full py-2 rounded-xl text-xs font-extrabold flex items-center justify-center gap-1.5 bg-gradient-to-r from-purple-600 via-pink-600 to-indigo-600 text-white shadow-lg hover:brightness-110 active:scale-95 transition-all">
-                            <span>🎬</span> Export 4K Motion Video (30s)
+                            <span>⚡</span> Turbo Export 4K 60FPS Video (30s)
                         </button>
                     </div>
 
@@ -914,7 +914,7 @@
                     <button onclick="quickExport('webp')" class="card-surface py-1 rounded-lg font-bold hover:border-cyan-400">WebP</button>
                 </div>
                 <button onclick="openVideoExportModal()" class="w-full py-1.5 rounded-xl text-[11px] font-extrabold flex items-center justify-center gap-1.5 border border-purple-500/40 text-purple-300 hover:text-white bg-purple-950/30 hover:bg-purple-900/50 transition-all">
-                    <span>🎬</span> Export 4K Motion Video (30s)
+                    <span>⚡</span> Turbo Export 4K 60FPS Video
                 </button>
             </div>
         </aside>
@@ -1035,8 +1035,8 @@
                     <div>
                         <label class="block text-[10px] mb-1 font-semibold" style="color: var(--text-secondary);">Framerate</label>
                         <select id="video-fps-select" class="input-surface w-full px-2 py-1.5 rounded-xl text-xs font-bold">
-                            <option value="30" selected>30 FPS (Standard)</option>
-                            <option value="60">60 FPS (Ultra Smooth)</option>
+                            <option value="60" selected>60 FPS (Ultra Smooth 4K · Fast Turbo)</option>
+                            <option value="30">30 FPS (Standard)</option>
                         </select>
                     </div>
                 </div>
@@ -1046,11 +1046,11 @@
                         <input type="checkbox" id="video-seamless-checkbox" checked class="accent-purple-400 w-4 h-4 cursor-pointer">
                         <span class="text-xs font-bold text-white">Seamless 30s Motion Loop</span>
                     </label>
-                    <span class="text-[10px] text-purple-300 font-mono">Stock Ready · ~35 Mbps Bitrate</span>
+                    <span class="text-[10px] text-purple-300 font-mono">⚡ Hardware Fast Encoding · ~35 Mbps</span>
                 </div>
 
                 <button onclick="startMotionVideoExport()" class="w-full py-3 rounded-xl text-xs sm:text-sm font-extrabold flex items-center justify-center gap-2 bg-gradient-to-r from-purple-600 via-pink-600 to-indigo-600 text-white shadow-xl hover:brightness-110 active:scale-95 transition-all">
-                    <span>🔴</span> Start 4K Video Export (30s)
+                    <span>⚡</span> Start Fast 4K 60FPS Video Export (30s)
                 </button>
             </div>
 
@@ -1065,8 +1065,8 @@
                         <div id="video-export-progress-bar" class="h-full bg-gradient-to-r from-purple-500 via-pink-500 to-indigo-400 rounded-full transition-all duration-100" style="width: 0%;"></div>
                     </div>
                     <div class="flex items-center justify-between text-[11px] font-mono text-slate-400">
-                        <span id="video-progress-eta">Remaining: ~30s · Bitrate: 35 Mbps</span>
-                        <span class="text-emerald-400 font-bold">⚡ GPU ACCELERATED 4K</span>
+                        <span id="video-progress-speed" class="text-cyan-300 font-bold">⚡ Hardware Acceleration Active</span>
+                        <span id="video-progress-eta">Remaining: ~15s · Bitrate: 35 Mbps</span>
                     </div>
                 </div>
 
@@ -1398,7 +1398,11 @@
             ctx.save();
             ctx.clearRect(0, 0, width, height);
 
-            ctx.filter = `brightness(${cfg.params.brightness}%) saturate(${cfg.params.saturation}%)`;
+            if (cfg.params.brightness !== 100 || cfg.params.saturation !== 100) {
+                ctx.filter = `brightness(${cfg.params.brightness}%) saturate(${cfg.params.saturation}%)`;
+            } else {
+                ctx.filter = 'none';
+            }
 
             if (!cfg.options.transparentBg) {
                 const bgGrad = ctx.createRadialGradient(
@@ -3660,7 +3664,7 @@
         }
 
         /* ==========================================================================
-           14. 4K MOTION VIDEO EXPORT ENGINE (30s Commercial Stock)
+           14. TURBO HARDWARE 4K 60FPS MOTION VIDEO EXPORT ENGINE
            ========================================================================== */
         let isVideoRecording = false;
         let videoRecorder = null;
@@ -3668,10 +3672,396 @@
         let videoStream = null;
         let videoLastBlob = null;
         let videoLastFilename = '';
+        let activeVideoEncoder = null;
+
+        // Progressive MP4 Muxer (ISOBMFF) for H.264 WebCodecs
+        class SimpleMp4Muxer {
+            constructor({ width, height, fps, timescale = 60000 }) {
+                this.width = width;
+                this.height = height;
+                this.fps = fps;
+                this.timescale = timescale;
+                this.sampleDelta = Math.round(timescale / fps);
+                this.samples = [];
+                this.avcC = null;
+            }
+
+            setAvcC(description) {
+                this.avcC = new Uint8Array(description);
+            }
+
+            addSample(uint8Data, isKeyframe) {
+                this.samples.push({
+                    data: uint8Data,
+                    isKeyframe: isKeyframe,
+                    size: uint8Data.byteLength
+                });
+            }
+
+            build() {
+                let mdatPayloadSize = 0;
+                for (const s of this.samples) mdatPayloadSize += s.size;
+                const duration = this.samples.length * this.sampleDelta;
+
+                function box(type, ...payloads) {
+                    let totalLen = 8;
+                    for (const p of payloads) totalLen += p.byteLength || p.length;
+                    const buf = new Uint8Array(totalLen);
+                    const dv = new DataView(buf.buffer);
+                    dv.setUint32(0, totalLen);
+                    for (let i = 0; i < 4; i++) buf[4 + i] = type.charCodeAt(i);
+                    let offset = 8;
+                    for (const p of payloads) {
+                        buf.set(p instanceof Uint8Array ? p : new Uint8Array(p), offset);
+                        offset += p.byteLength || p.length;
+                    }
+                    return buf;
+                }
+
+                const ftypPayload = new Uint8Array(16);
+                ftypPayload.set([0x69, 0x73, 0x6F, 0x6D]); // isom
+                new DataView(ftypPayload.buffer).setUint32(4, 0x00000200);
+                ftypPayload.set([0x69, 0x73, 0x6F, 0x6D], 8);
+                ftypPayload.set([0x6D, 0x70, 0x34, 0x31], 12);
+                const ftypBox = box('ftyp', ftypPayload);
+
+                const avccBox = this.avcC ? box('avcC', this.avcC) : new Uint8Array(0);
+                const avc1Header = new Uint8Array(78);
+                const avc1Dv = new DataView(avc1Header.buffer);
+                avc1Dv.setUint16(6, 1);
+                avc1Dv.setUint16(24, this.width);
+                avc1Dv.setUint16(26, this.height);
+                avc1Dv.setUint32(28, 0x00480000);
+                avc1Dv.setUint32(32, 0x00480000);
+                avc1Dv.setUint16(40, 1);
+                avc1Dv.setUint16(74, 0x0018);
+                avc1Dv.setInt16(76, -1);
+                const avc1Box = box('avc1', avc1Header, avccBox);
+
+                const stsdPayload = new Uint8Array(8);
+                new DataView(stsdPayload.buffer).setUint32(4, 1);
+                const stsdBox = box('stsd', stsdPayload, avc1Box);
+
+                const sttsPayload = new Uint8Array(16);
+                const sttsDv = new DataView(sttsPayload.buffer);
+                sttsDv.setUint32(4, 1);
+                sttsDv.setUint32(8, this.samples.length);
+                sttsDv.setUint32(12, this.sampleDelta);
+                const sttsBox = box('stts', sttsPayload);
+
+                const keyIndices = [];
+                for (let i = 0; i < this.samples.length; i++) {
+                    if (this.samples[i].isKeyframe) keyIndices.push(i + 1);
+                }
+                const stssPayload = new Uint8Array(8 + keyIndices.length * 4);
+                const stssDv = new DataView(stssPayload.buffer);
+                stssDv.setUint32(4, keyIndices.length);
+                for (let i = 0; i < keyIndices.length; i++) {
+                    stssDv.setUint32(8 + i * 4, keyIndices[i]);
+                }
+                const stssBox = box('stss', stssPayload);
+
+                const stscPayload = new Uint8Array(20);
+                const stscDv = new DataView(stscPayload.buffer);
+                stscDv.setUint32(4, 1);
+                stscDv.setUint32(8, 1);
+                stscDv.setUint32(12, 1);
+                stscDv.setUint32(16, 1);
+                const stscBox = box('stsc', stscPayload);
+
+                const stszPayload = new Uint8Array(12 + this.samples.length * 4);
+                const stszDv = new DataView(stszPayload.buffer);
+                stszDv.setUint32(8, this.samples.length);
+                for (let i = 0; i < this.samples.length; i++) {
+                    stszDv.setUint32(12 + i * 4, this.samples[i].size);
+                }
+                const stszBox = box('stsz', stszPayload);
+
+                const dummyStcoPayload = new Uint8Array(8 + this.samples.length * 4);
+                const dummyStcoBox = box('stco', dummyStcoPayload);
+                const dummyStblBox = box('stbl', stsdBox, sttsBox, stssBox, stscBox, stszBox, dummyStcoBox);
+
+                const vmhdPayload = new Uint8Array(12);
+                vmhdPayload[3] = 1;
+                const vmhdBox = box('vmhd', vmhdPayload);
+
+                const drefPayload = new Uint8Array(20);
+                new DataView(drefPayload.buffer).setUint32(4, 1);
+                new DataView(drefPayload.buffer).setUint32(8, 12);
+                drefPayload.set([0x75, 0x72, 0x6C, 0x20], 12);
+                drefPayload[19] = 1;
+                const dinfBox = box('dinf', box('dref', drefPayload));
+
+                const minfBox = box('minf', vmhdBox, dinfBox, dummyStblBox);
+
+                const hdlrPayload = new Uint8Array(25);
+                hdlrPayload.set([0x76, 0x69, 0x64, 0x65], 8);
+                const hdlrBox = box('hdlr', hdlrPayload);
+
+                const mdhdPayload = new Uint8Array(24);
+                const mdhdDv = new DataView(mdhdPayload.buffer);
+                mdhdDv.setUint32(12, this.timescale);
+                mdhdDv.setUint32(16, duration);
+                mdhdDv.setUint16(20, 0x55C4);
+                const mdhdBox = box('mdhd', mdhdPayload);
+
+                const mdiaBox = box('mdia', mdhdBox, hdlrBox, minfBox);
+
+                const tkhdPayload = new Uint8Array(84);
+                const tkhdDv = new DataView(tkhdPayload.buffer);
+                tkhdPayload[3] = 3;
+                tkhdDv.setUint32(12, 1);
+                tkhdDv.setUint32(20, duration);
+                tkhdDv.setUint32(36, 0x00010000);
+                tkhdDv.setUint32(52, 0x00010000);
+                tkhdDv.setUint32(68, 0x40000000);
+                tkhdDv.setUint32(76, this.width << 16);
+                tkhdDv.setUint32(80, this.height << 16);
+                const tkhdBox = box('tkhd', tkhdPayload);
+
+                const trakBox = box('trak', tkhdBox, mdiaBox);
+
+                const mvhdPayload = new Uint8Array(100);
+                const mvhdDv = new DataView(mvhdPayload.buffer);
+                mvhdDv.setUint32(12, this.timescale);
+                mvhdDv.setUint32(16, duration);
+                mvhdDv.setUint32(20, 0x00010000);
+                mvhdDv.setUint16(24, 0x0100);
+                mvhdDv.setUint32(36, 0x00010000);
+                mvhdDv.setUint32(52, 0x00010000);
+                mvhdDv.setUint32(68, 0x40000000);
+                mvhdDv.setUint32(96, 2);
+                const mvhdBox = box('mvhd', mvhdPayload);
+
+                const moovBox = box('moov', mvhdBox, trakBox);
+                const moovSize = moovBox.byteLength;
+
+                let currentOffset = ftypBox.byteLength + moovSize + 8;
+                const realStcoPayload = new Uint8Array(8 + this.samples.length * 4);
+                const realStcoDv = new DataView(realStcoPayload.buffer);
+                realStcoDv.setUint32(4, this.samples.length);
+                for (let i = 0; i < this.samples.length; i++) {
+                    realStcoDv.setUint32(8 + i * 4, currentOffset);
+                    currentOffset += this.samples[i].size;
+                }
+                const realStcoBox = box('stco', realStcoPayload);
+
+                const realStblBox = box('stbl', stsdBox, sttsBox, stssBox, stscBox, stszBox, realStcoBox);
+                const realMinfBox = box('minf', vmhdBox, dinfBox, realStblBox);
+                const realMdiaBox = box('mdia', mdhdBox, hdlrBox, realMinfBox);
+                const realTrakBox = box('trak', tkhdBox, realMdiaBox);
+                const realMoovBox = box('moov', mvhdBox, realTrakBox);
+
+                const mdatHeader = new Uint8Array(8);
+                new DataView(mdatHeader.buffer).setUint32(0, 8 + mdatPayloadSize);
+                mdatHeader.set([0x6D, 0x64, 0x61, 0x74], 4);
+
+                const totalFileBytes = ftypBox.byteLength + realMoovBox.byteLength + 8 + mdatPayloadSize;
+                const out = new Uint8Array(totalFileBytes);
+                let ptr = 0;
+                out.set(ftypBox, ptr); ptr += ftypBox.byteLength;
+                out.set(realMoovBox, ptr); ptr += realMoovBox.byteLength;
+                out.set(mdatHeader, ptr); ptr += 8;
+                for (const s of this.samples) {
+                    out.set(s.data, ptr);
+                    ptr += s.size;
+                }
+                return out;
+            }
+        }
+
+        // Fast EBML WebM Muxer for VP9 WebCodecs
+        class SimpleWebmMuxer {
+            constructor({ width, height, fps }) {
+                this.width = width;
+                this.height = height;
+                this.fps = fps;
+                this.chunks = [];
+            }
+
+            addChunk(chunkData, isKeyframe, timecodeMs) {
+                this.chunks.push({
+                    data: chunkData,
+                    isKeyframe: isKeyframe,
+                    timecodeMs: Math.round(timecodeMs)
+                });
+            }
+
+            build() {
+                function vint(val) {
+                    if (val < 0x7F) return [0x80 | val];
+                    if (val < 0x3FFF) return [(0x40 | (val >> 8)), val & 0xFF];
+                    if (val < 0x1FFFFF) return [(0x20 | (val >> 16)), (val >> 8) & 0xFF, val & 0xFF];
+                    if (val < 0x0FFFFFFF) return [(0x10 | (val >> 24)), (val >> 16) & 0xFF, (val >> 8) & 0xFF, val & 0xFF];
+                    return [(0x08 | Math.floor(val / 0x100000000)), (val >> 24) & 0xFF, (val >> 16) & 0xFF, (val >> 8) & 0xFF, val & 0xFF];
+                }
+
+                function ebmlElem(idBytes, ...payloads) {
+                    let payloadLen = 0;
+                    for (const p of payloads) payloadLen += p.byteLength || p.length;
+                    const sizeVint = vint(payloadLen);
+                    const total = idBytes.length + sizeVint.length + payloadLen;
+                    const buf = new Uint8Array(total);
+                    let offset = 0;
+                    buf.set(idBytes, offset); offset += idBytes.length;
+                    buf.set(sizeVint, offset); offset += sizeVint.length;
+                    for (const p of payloads) {
+                        buf.set(p instanceof Uint8Array ? p : new Uint8Array(p), offset);
+                        offset += p.byteLength || p.length;
+                    }
+                    return buf;
+                }
+
+                function uIntElem(idBytes, val) {
+                    const bytes = [];
+                    let temp = val;
+                    do {
+                        bytes.unshift(temp & 0xFF);
+                        temp = temp >> 8;
+                    } while (temp > 0);
+                    return ebmlElem(idBytes, bytes);
+                }
+
+                function strElem(idBytes, str) {
+                    const bytes = [];
+                    for (let i = 0; i < str.length; i++) bytes.push(str.charCodeAt(i));
+                    return ebmlElem(idBytes, bytes);
+                }
+
+                function floatElem(idBytes, val) {
+                    const buf = new Uint8Array(4);
+                    new DataView(buf.buffer).setFloat32(0, val, false);
+                    return ebmlElem(idBytes, buf);
+                }
+
+                const header = ebmlElem([0x1A, 0x45, 0xDF, 0xA3],
+                    uIntElem([0x42, 0x86], 1),
+                    uIntElem([0x42, 0xF7], 1),
+                    uIntElem([0x42, 0xF2], 4),
+                    uIntElem([0x42, 0xF3], 8),
+                    strElem([0x42, 0x82], 'webm'),
+                    uIntElem([0x42, 0x87], 4),
+                    uIntElem([0x42, 0x85], 2)
+                );
+
+                const durationMs = this.chunks.length > 0 ? this.chunks[this.chunks.length - 1].timecodeMs + (1000 / this.fps) : 0;
+                const info = ebmlElem([0x15, 0x49, 0xA9, 0x66],
+                    uIntElem([0x2A, 0xD7, 0xB1], 1000000),
+                    floatElem([0x44, 0x89], durationMs),
+                    strElem([0x4D, 0x80], 'RI-Studio-Fast4K'),
+                    strElem([0x57, 0x41], 'RI-Studio')
+                );
+
+                const videoSettings = ebmlElem([0xE0],
+                    uIntElem([0xB0], this.width),
+                    uIntElem([0xBA], this.height),
+                    floatElem([0x23, 0x83, 0xE3], this.fps)
+                );
+
+                const trackEntry = ebmlElem([0xAE],
+                    uIntElem([0xD7], 1),
+                    uIntElem([0x73, 0xC5], 1),
+                    uIntElem([0x83], 1),
+                    strElem([0x86], 'V_VP9'),
+                    videoSettings
+                );
+
+                const tracks = ebmlElem([0x16, 0x54, 0xAE, 0x6B], trackEntry);
+
+                const clusterElements = [];
+                let curClusterTimecode = 0;
+                let curClusterBlocks = [];
+
+                for (let i = 0; i < this.chunks.length; i++) {
+                    const ch = this.chunks[i];
+                    const needNewCluster = (curClusterBlocks.length === 0) || ch.isKeyframe || ((ch.timecodeMs - curClusterTimecode) >= 2000);
+                    
+                    if (needNewCluster && curClusterBlocks.length > 0) {
+                        const clusterElem = ebmlElem([0x1F, 0x43, 0xB6, 0x75],
+                            uIntElem([0xE7], curClusterTimecode),
+                            ...curClusterBlocks
+                        );
+                        clusterElements.push(clusterElem);
+                        curClusterBlocks = [];
+                        curClusterTimecode = ch.timecodeMs;
+                    } else if (curClusterBlocks.length === 0) {
+                        curClusterTimecode = ch.timecodeMs;
+                    }
+
+                    const relTime = ch.timecodeMs - curClusterTimecode;
+                    const blockHeader = new Uint8Array(4);
+                    blockHeader[0] = 0x81;
+                    new DataView(blockHeader.buffer).setInt16(1, relTime, false);
+                    blockHeader[3] = ch.isKeyframe ? 0x80 : 0x00;
+                    const block = ebmlElem([0xA3], blockHeader, ch.data);
+                    curClusterBlocks.push(block);
+                }
+
+                if (curClusterBlocks.length > 0) {
+                    const clusterElem = ebmlElem([0x1F, 0x43, 0xB6, 0x75],
+                        uIntElem([0xE7], curClusterTimecode),
+                        ...curClusterBlocks
+                    );
+                    clusterElements.push(clusterElem);
+                }
+
+                const segmentPayloads = [info, tracks, ...clusterElements];
+                const segment = ebmlElem([0x18, 0x53, 0x80, 0x67], ...segmentPayloads);
+
+                const totalFileBytes = header.byteLength + segment.byteLength;
+                const out = new Uint8Array(totalFileBytes);
+                out.set(header, 0);
+                out.set(segment, header.byteLength);
+                return out;
+            }
+        }
+
+        async function getBestWebCodecsConfig(w, h, fps, preferredFmt = 'mp4') {
+            if (typeof VideoEncoder === 'undefined') return null;
+
+            const mp4Configs = [
+                { codec: 'avc1.640034', ext: 'mp4', format: 'mp4' },
+                { codec: 'avc1.4d0034', ext: 'mp4', format: 'mp4' },
+                { codec: 'avc1.420034', ext: 'mp4', format: 'mp4' }
+            ];
+            const webmConfigs = [
+                { codec: 'vp09.00.41.08', ext: 'webm', format: 'webm' },
+                { codec: 'vp09.00.10.08', ext: 'webm', format: 'webm' },
+                { codec: 'vp8', ext: 'webm', format: 'webm' }
+            ];
+
+            const list = preferredFmt === 'mp4'
+                ? [...mp4Configs, ...webmConfigs]
+                : [...webmConfigs, ...mp4Configs];
+
+            const bitrate = w >= 3840 ? 35000000 : w >= 2560 ? 24000000 : 16000000;
+
+            for (const item of list) {
+                const cfg = {
+                    codec: item.codec,
+                    width: w,
+                    height: h,
+                    bitrate: bitrate,
+                    framerate: fps,
+                    hardwareAcceleration: 'prefer-hardware'
+                };
+                if (item.format === 'mp4') {
+                    cfg.avc = { format: 'avc' };
+                }
+                try {
+                    const support = await VideoEncoder.isConfigSupported(cfg);
+                    if (support && support.supported) {
+                        return { ...support.config, ext: item.ext, format: item.format };
+                    }
+                } catch (e) {
+                    // Try next candidate
+                }
+            }
+            return null;
+        }
 
         function detectBestVideoFormat(requestedFormat = 'mp4') {
             if (typeof MediaRecorder === 'undefined') return null;
-
             const mp4Candidates = [
                 { mime: 'video/mp4;codecs=avc1.42E01E,mp4a.40.2', ext: 'mp4' },
                 { mime: 'video/mp4;codecs=avc1', ext: 'mp4' },
@@ -3682,7 +4072,6 @@
                 { mime: 'video/webm;codecs=vp8', ext: 'webm' },
                 { mime: 'video/webm', ext: 'webm' }
             ];
-
             const preferredList = requestedFormat === 'mp4'
                 ? [...mp4Candidates, ...webmCandidates]
                 : [...webmCandidates, ...mp4Candidates];
@@ -3734,13 +4123,214 @@
             const resVal = document.getElementById('video-res-select')?.value || '3840x2160';
             const [w, h] = resVal.split('x').map(Number);
             const durationSec = Number(document.getElementById('video-duration-select')?.value) || 30;
-            const fps = Number(document.getElementById('video-fps-select')?.value) || 30;
+            const fps = Number(document.getElementById('video-fps-select')?.value) || 60;
             const fmtPref = document.getElementById('video-fmt-select')?.value || 'mp4';
             const seamless = document.getElementById('video-seamless-checkbox')?.checked ?? true;
 
+            const cleanName = (document.getElementById('export-filename')?.value.trim() || `ri-stock-${state.category}-${state.seed}`)
+                .replace(/[^a-zA-Z0-9-_]/g, '-');
+            const resLabel = w >= 3840 ? '4K-UHD' : `${w}x${h}`;
+
+            // Try Turbo WebCodecs Hardware Acceleration
+            const webCodecsConfig = await getBestWebCodecsConfig(w, h, fps, fmtPref);
+            if (webCodecsConfig) {
+                startTurboWebCodecsExport(w, h, durationSec, fps, webCodecsConfig, seamless, cleanName, resLabel);
+                return;
+            }
+
+            // Fallback: Real-time MediaRecorder
+            startMediaRecorderFallback(w, h, durationSec, fps, fmtPref, seamless, cleanName, resLabel);
+        }
+
+        async function startTurboWebCodecsExport(w, h, durationSec, fps, config, seamless, cleanName, resLabel) {
+            isVideoRecording = true;
+            const outputFilename = `${cleanName}-${resLabel}-${durationSec}s-60fps.${config.ext}`;
+            videoLastFilename = outputFilename;
+
+            // UI Setup
+            document.getElementById('video-export-idle-view')?.classList.add('hidden');
+            document.getElementById('video-export-recording-view')?.classList.remove('hidden');
+            document.getElementById('video-export-success-view')?.classList.add('hidden');
+            document.getElementById('video-export-close-btn')?.classList.add('hidden');
+
+            const recBadge = document.getElementById('video-rec-badge');
+            if (recBadge) {
+                recBadge.classList.remove('hidden');
+                recBadge.classList.add('flex');
+                recBadge.innerHTML = `<span class="w-2 h-2 rounded-full bg-white"></span><span>⚡ TURBO 4K ${fps}FPS</span>`;
+            }
+
+            const totalFrames = durationSec * fps;
+            const exportCfg = JSON.parse(JSON.stringify(state));
+            const initialPhase = state.animPhase;
+
+            const nominalTotalPhase = totalFrames * 0.025 * (state.params.speed / 50);
+            let phaseStep;
+            if (seamless) {
+                const cycles = Math.max(1, Math.round(nominalTotalPhase / (Math.PI * 2)));
+                phaseStep = (cycles * Math.PI * 2) / totalFrames;
+            } else {
+                phaseStep = 0.025 * (state.params.speed / 50);
+            }
+
+            // Create offscreen rendering canvas (hardware accelerated, opaque for 4K maximum FPS)
+            let renderCanvas;
+            try {
+                renderCanvas = new OffscreenCanvas(w, h);
+            } catch (e) {
+                renderCanvas = document.createElement('canvas');
+                renderCanvas.width = w;
+                renderCanvas.height = h;
+            }
+
+            const previewCanvas = document.getElementById('video-render-canvas');
+            const previewCtx = previewCanvas ? previewCanvas.getContext('2d') : null;
+
+            // Initialize Muxer
+            let muxer;
+            if (config.format === 'mp4') {
+                muxer = new SimpleMp4Muxer({ width: w, height: h, fps: fps });
+            } else {
+                muxer = new SimpleWebmMuxer({ width: w, height: h, fps: fps });
+            }
+
+            let encodeQueue = 0;
+            const encoder = new VideoEncoder({
+                output: (chunk, metadata) => {
+                    encodeQueue--;
+                    if (metadata && metadata.decoderConfig && metadata.decoderConfig.description) {
+                        if (muxer.setAvcC) muxer.setAvcC(metadata.decoderConfig.description);
+                    }
+                    const chunkData = new Uint8Array(chunk.byteLength);
+                    chunk.copyTo(chunkData);
+                    const isKey = chunk.type === 'key';
+                    if (muxer.addSample) {
+                        muxer.addSample(chunkData, isKey);
+                    } else if (muxer.addChunk) {
+                        muxer.addChunk(chunkData, isKey, chunk.timestamp / 1000);
+                    }
+                },
+                error: (e) => {
+                    console.error('VideoEncoder error:', e);
+                    showToast('Video encoder error: ' + e.message);
+                    cancelVideoRecording();
+                }
+            });
+            activeVideoEncoder = encoder;
+
+            try {
+                encoder.configure(config);
+            } catch (err) {
+                console.warn('Encoder configure failed, falling back:', err);
+                activeVideoEncoder = null;
+                startMediaRecorderFallback(w, h, durationSec, fps, config.ext, seamless, cleanName, resLabel);
+                return;
+            }
+
+            let frameIndex = 0;
+            const batchSize = 4;
+            const startWallTime = performance.now();
+
+            async function renderLoop() {
+                if (!isVideoRecording) {
+                    try { encoder.close(); } catch (e) {}
+                    activeVideoEncoder = null;
+                    return;
+                }
+
+                const end = Math.min(totalFrames, frameIndex + batchSize);
+                for (; frameIndex < end; frameIndex++) {
+                    const curPhase = initialPhase + frameIndex * phaseStep;
+                    renderArtworkToCanvas(renderCanvas, w, h, exportCfg, curPhase);
+
+                    const timestampUs = Math.round(frameIndex * (1000000 / fps));
+                    const isKey = (frameIndex % (fps * 2) === 0);
+
+                    const videoFrame = new VideoFrame(renderCanvas, {
+                        timestamp: timestampUs,
+                        duration: Math.round(1000000 / fps)
+                    });
+                    encodeQueue++;
+                    encoder.encode(videoFrame, { keyFrame: isKey });
+                    videoFrame.close();
+                }
+
+                // Update live thumbnail every 6 frames
+                if (previewCtx && (frameIndex % 6 === 0 || frameIndex >= totalFrames)) {
+                    previewCtx.drawImage(renderCanvas, 0, 0, previewCanvas.width, previewCanvas.height);
+                }
+
+                // Calculate real-time encoding speed (FPS)
+                const elapsedWallSec = Math.max(0.01, (performance.now() - startWallTime) / 1000);
+                const currentFps = (frameIndex / elapsedWallSec).toFixed(0);
+                const pct = Math.min(100, Math.round((frameIndex / totalFrames) * 100));
+                const remainSec = currentFps > 0 ? Math.max(0, (totalFrames - frameIndex) / currentFps).toFixed(1) : '~';
+
+                const pBar = document.getElementById('video-export-progress-bar');
+                if (pBar) pBar.style.width = `${pct}%`;
+                const pPct = document.getElementById('video-progress-pct');
+                if (pPct) pPct.textContent = `${pct}%`;
+                const pTxt = document.getElementById('video-progress-text');
+                if (pTxt) pTxt.textContent = `Turbo Rendering Frame ${frameIndex} / ${totalFrames} (${(frameIndex / fps).toFixed(1)}s / ${durationSec}s)`;
+                const pSpd = document.getElementById('video-progress-speed');
+                if (pSpd) pSpd.textContent = `⚡ Speed: ${currentFps} FPS (${(currentFps / fps).toFixed(1)}x Turbo) · Elapsed: ${elapsedWallSec.toFixed(1)}s`;
+                const pEta = document.getElementById('video-progress-eta');
+                if (pEta) pEta.textContent = `Remaining: ~${remainSec}s · Bitrate: 35 Mbps`;
+                const pTime = document.getElementById('video-rec-timer');
+                if (pTime) pTime.textContent = `${(frameIndex / fps).toFixed(1)}s / ${durationSec}s`;
+
+                if (frameIndex < totalFrames) {
+                    if (encodeQueue > 24) {
+                        await new Promise(r => setTimeout(r, 6));
+                    }
+                    requestAnimationFrame(renderLoop);
+                } else {
+                    // Completed!
+                    if (pTxt) pTxt.textContent = `Finalizing ${config.format.toUpperCase()} video package...`;
+                    await encoder.flush();
+                    encoder.close();
+                    activeVideoEncoder = null;
+
+                    const videoBytes = muxer.build();
+                    const mime = config.format === 'mp4' ? 'video/mp4' : 'video/webm';
+                    const blob = new Blob([videoBytes], { type: mime });
+                    videoLastBlob = blob;
+                    const sizeMb = (blob.size / (1024 * 1024)).toFixed(2);
+
+                    triggerDownload(blob, outputFilename);
+                    showToast(`⚡ Turbo 4K 60FPS Video Exported in ${elapsedWallSec.toFixed(1)}s (${sizeMb} MB)!`);
+
+                    const recBadge = document.getElementById('video-rec-badge');
+                    if (recBadge) {
+                        recBadge.classList.add('hidden');
+                        recBadge.classList.remove('flex');
+                    }
+
+                    document.getElementById('video-export-recording-view')?.classList.add('hidden');
+                    const successView = document.getElementById('video-export-success-view');
+                    if (successView) {
+                        successView.classList.remove('hidden');
+                        const infoEl = document.getElementById('video-success-info');
+                        if (infoEl) {
+                            infoEl.innerHTML = `
+                                <div class="font-bold text-white text-xs">${outputFilename}</div>
+                                <div class="text-[11px] text-purple-300">File Size: ${sizeMb} MB · Resolution: ${w}×${h} · Duration: ${durationSec}s · FPS: ${fps}</div>
+                                <div class="text-[10px] text-emerald-400 font-bold">⚡ Rendered in ${elapsedWallSec.toFixed(1)}s (${currentFps} FPS Turbo Speed)</div>
+                            `;
+                        }
+                    }
+                    document.getElementById('video-export-close-btn')?.classList.remove('hidden');
+                    isVideoRecording = false;
+                }
+            }
+
+            renderLoop();
+        }
+
+        function startMediaRecorderFallback(w, h, durationSec, fps, fmtPref, seamless, cleanName, resLabel) {
             const mimeInfo = detectBestVideoFormat(fmtPref);
             if (!mimeInfo || typeof MediaRecorder === 'undefined') {
-                showToast('❌ Video recording (MediaRecorder) is not supported in this browser.');
+                showToast('❌ Video recording is not supported in this browser.');
                 return;
             }
 
@@ -3749,9 +4339,7 @@
             canvas.width = w;
             canvas.height = h;
 
-            // Bitrate calculation: 4K UHD = 35 Mbps, 2K = 24 Mbps, 1080p = 16 Mbps
-            const bitrate = w >= 3840 ? 35000000 : w >= 2560 ? 24000000 : 16000000;
-
+            const bitrate = w >= 3840 ? 35000000 : 16000000;
             let stream;
             try {
                 stream = canvas.captureStream ? canvas.captureStream(fps) : null;
@@ -3759,9 +4347,8 @@
                 showToast('❌ Canvas captureStream failed: ' + err.message);
                 return;
             }
-
             if (!stream) {
-                showToast('❌ Canvas stream is not supported in this browser.');
+                showToast('❌ Canvas stream is not supported.');
                 return;
             }
             videoStream = stream;
@@ -3773,23 +4360,14 @@
                     ? new MediaRecorder(stream, { mimeType: mimeInfo.mime, videoBitsPerSecond: bitrate })
                     : new MediaRecorder(stream, { videoBitsPerSecond: bitrate });
             } catch (e) {
-                try {
-                    recorder = new MediaRecorder(stream);
-                } catch (e2) {
-                    showToast('❌ MediaRecorder init failed: ' + e2.message);
-                    return;
-                }
+                recorder = new MediaRecorder(stream);
             }
-
             videoRecorder = recorder;
             recorder.ondataavailable = (e) => {
                 if (e.data && e.data.size > 0) chunks.push(e.data);
             };
 
-            const cleanName = (document.getElementById('export-filename')?.value.trim() || `ri-stock-${state.category}-${state.seed}`)
-                .replace(/[^a-zA-Z0-9-_]/g, '-');
-            const resLabel = w >= 3840 ? '4K-UHD' : `${w}x${h}`;
-            const outputFilename = `${cleanName}-${resLabel}-${durationSec}s.${mimeInfo.ext}`;
+            const outputFilename = `${cleanName}-${resLabel}-${durationSec}s-${fps}fps.${mimeInfo.ext}`;
             videoLastFilename = outputFilename;
 
             isVideoRecording = true;
@@ -3808,7 +4386,6 @@
             const exportCfg = JSON.parse(JSON.stringify(state));
             const initialPhase = state.animPhase;
 
-            // Seamless phase step calculation
             const nominalTotalPhase = totalFrames * 0.025 * (state.params.speed / 50);
             let phaseStep;
             if (seamless) {
@@ -3832,9 +4409,8 @@
                     recBadge.classList.add('hidden');
                     recBadge.classList.remove('flex');
                 }
-                if (!isVideoRecording && frameIndex < totalFrames) {
-                    return; // Aborted
-                }
+                if (!isVideoRecording && frameIndex < totalFrames) return;
+
                 const blob = new Blob(chunks, { type: mimeInfo.mime || 'video/mp4' });
                 videoLastBlob = blob;
                 const sizeMb = (blob.size / (1024 * 1024)).toFixed(2);
@@ -3883,9 +4459,7 @@
                 if (pTime) pTime.textContent = `${elapsedSec}s / ${durationSec}s`;
 
                 if (frameIndex >= totalFrames) {
-                    if (recorder.state === 'recording') {
-                        recorder.stop();
-                    }
+                    if (recorder.state === 'recording') recorder.stop();
                     return;
                 }
 
@@ -3900,6 +4474,10 @@
         function cancelVideoRecording() {
             if (!isVideoRecording) return;
             isVideoRecording = false;
+            if (activeVideoEncoder) {
+                try { activeVideoEncoder.close(); } catch (e) {}
+                activeVideoEncoder = null;
+            }
             if (videoTimerId) {
                 clearTimeout(videoTimerId);
                 videoTimerId = null;
@@ -3911,7 +4489,7 @@
                 videoStream.getTracks().forEach(t => t.stop());
                 videoStream = null;
             }
-            showToast('🛑 Video recording stopped');
+            showToast('🛑 Video export cancelled');
             document.getElementById('video-export-recording-view')?.classList.add('hidden');
             document.getElementById('video-export-idle-view')?.classList.remove('hidden');
             document.getElementById('video-export-close-btn')?.classList.remove('hidden');
@@ -3933,7 +4511,7 @@
             const res = document.getElementById('video-export-res')?.value || '3840x2160';
             const dur = document.getElementById('video-export-duration')?.value || '30';
             const fmt = document.getElementById('video-export-fmt')?.value || 'mp4';
-            const fps = document.getElementById('video-export-fps')?.value || '30';
+            const fps = document.getElementById('video-export-fps')?.value || '60';
             const seam = document.getElementById('video-export-seamless')?.checked ?? true;
 
             const modalRes = document.getElementById('video-res-select');
